@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Los mejores 9 meses de mi vida</title>
+  <style>
+    :root{
+      --bg: linear-gradient(135deg,#6a00f4,#1e90ff);
+      --text: #ffffff;
+      --container-bg:rgba(255,255,255,0.03);
+      --container-border:rgba(255,255,255,0.06);
+      --accent:#cfa3ff;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Georgia,serif;background:var(--bg);color:var(--white);-webkit-font-smoothing:antialiased}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;display:flex;justify-content:center;gap:22px;padding:14px 20px;background:rgba(0,0,0,0.45);backdrop-filter:blur(6px);z-index:40}
+    nav a{color:rgba(255,255,255,0.95);text-decoration:none;font-size:15px;opacity:.95}
+    nav a:focus,nav a:hover{opacity:1}
+
+    main{padding-top:74px}
+    section{min-height:60vh;padding:48px 18px;display:flex;align-items:center;justify-content:center}
+
+    .container{max-width:980px;width:100%;background:var(--container-bg);border:1px solid var(--container-border);padding:36px;border-radius:14px;text-align:center;color:var(--white)}
+    .container h1,.container h2{margin-bottom:18px;letter-spacing:1px;color:var(--text);text-shadow:0 2px 8px rgba(0,0,0,0.6)}
+    .container p{line-height:1.8;margin-bottom:16px;color:var(--text)}
+    .container small{display:block;color:rgba(255,255,255,0.75);margin-top:6px}
+
+    /* Galería */
+    .gallery{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .gallery img{width:100%;height:220px;object-fit:cover;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.6);transition:transform .35s ease,box-shadow .35s ease}
+    .gallery img:hover{transform:scale(1.04);box-shadow:0 20px 45px rgba(207,163,255,0.28)}
+
+    /* Responsive */
+    @media (max-width:900px){.gallery{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:600px){.gallery{grid-template-columns:1fr}.gallery img{height:180px}.container{padding:24px}}
+
+    /* Efecto fade simple */
+    .fade{opacity:0;transform:translateY(16px);transition:all .8s ease}
+    .fade.show{opacity:1;transform:none}
+
+    /* Color picker */
+    .color-picker{position:fixed;bottom:20px;right:20px;z-index:80}
+    .color-picker button{background:rgba(0,0,0,0.6);color:var(--text);border:1px solid rgba(255,255,255,0.08);padding:10px 12px;border-radius:10px;cursor:pointer}
+    .bg-panel{display:none;position:absolute;right:0;bottom:56px;width:240px;background:rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.06);padding:12px;border-radius:10px;color:var(--text)}
+    .bg-panel.show{display:block}
+    .bg-panel label{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;font-size:14px}
+    .bg-panel input[type="color"]{width:42px;height:30px;border-radius:6px;border:0;padding:0}
+    .bg-panel .actions{display:flex;gap:8px;justify-content:flex-end;margin-top:8px}
+    .bg-panel .actions button{padding:6px 10px;border-radius:8px;border:0;cursor:pointer}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#poetas">Poetas</a>
+    <a href="#frases">Frases</a>
+    <a href="#detalles">Detalles</a>
+    <a href="#final">Final</a>
+  </nav>
+
+  <main>
+    <section id="inicio">
+      <div class="container fade" id="inicio-container">
+        <h1>FELIZ 9 MESES MI VIDA</h1>
+        <p>Esta página no es solo una web. Es un lugar donde todo lo que siento tiene forma.</p>
+        <p>Recuerdo cada momento, cada risa, cada mirada... 14.643 razones para sonreír contigo.</p>
+
+        <div class="gallery" aria-label="Galería de fotos">
+          <img src="img/IMG_8124.jpeg" alt="Foto 1" />
+          <img src="img/IMG_8143.jpeg" alt="Foto 2" />
+          <img src="img/IMG_7723.jpeg" alt="Foto 3" />
+          <img src="img/IMG_8429.jpeg" alt="Foto 4" />
+          <img src="img/IMG_8432.jpeg" alt="Foto 5" />
+          <img src="img/IMG_8433.jpeg" alt="Foto 6" />
+          <img src="img/IMG_8435.jpeg" alt="Foto 7" />
+          <img src="img/IMG_8436.jpeg" alt="Foto 8" />
+          <img src="img/ccc97020-072f-47bf-9dfb-cf39f0f3b000.jpeg" alt="Foto 9" />
+        </div>
+      </div>
+    </section>
+
+    <section id="poetas">
+      <div class="container fade">
+        <h2>Poetas y su amada</h2>
+        <p>❝ Quiero hacer contigo lo que la primavera hace con los cerezos. ❞<small>— Pablo Neruda</small></p>
+        <p>❝ Te amo por quien eres, y por quien soy cuando estoy contigo. ❞<small>— Mario Benedetti</small></p>
+        <p>❝ ¿Cómo te amo? Déjame contar las maneras. ❞<small>— Elizabeth Barrett Browning</small></p>
+        <p>❝ No amo nada en el mundo tanto como a ti. ❞<small>— William Shakespeare</small></p>
+        <p>❝ llevo tu corazón conmigo (lo llevo en mi corazón). ❞<small>— E. E. Cummings</small></p>
+        <p>❝ Donde tu estas, allí esta mi hogar. ❞<small>— Rumi</small></p>
+        <p>❝ Eres el refugio de mi corazón; en ti encuentro mi paz. ❞<small>— Rumi</small></p>
+        <p>❝ Envejece conmigo: lo mejor está por venir. ❞<small>— Robert Browning</small></p>
+        <p>❝ Si te amara menos, podría hablarlo más. ❞<small>— Jane Austen</small></p>
+      </div>
+    </section>
+
+    <section id="frases">
+      <div class="container fade">
+        <h2>9 meses son los que mas enamorado estoy de ti</h2>
+        <p>9 meses son los que llevamos, 9 meses son los que un bebe tarda en nacer, 9 meses son los que casi terminan un año, 9 meses son los que uno tarda en darse cuenta en lo rapido que pasa el tiempo, es increible, como un hola terminó en este sueño de Disney, como un beso terminó en promesa de un corazon al otro, como un abrazo terminó en el refugio del otro, es impresionante, pues antes de tenerte conmigo, sentia frio, vacio, me sentia perdido, pues veia a todos con felicidad, pero la mia se la habia robado el tiempo, situaciones y momentos malos que se grabaron en mi mente como si fuera una pelicula en bucle, te conoci en un momento horrible, pues yo miraba el mundo y lo veia de colores grises, empezamos a hablar, y tuve con quien contar mis cosas, pasó un dia, y nos volvimos novios, y es increible, como de un dia para otro dos almas se encuentran y conectan tan facil, pero me encanta porque desde que te conoci ya no me siento fragil, te conoci sintiendo frio, y me hiciste sentir calor, que hace mucho no habia sentido, me diste un refugio, me diste lo mejor, y yo te prometi, a tu corazon, que si lo robaba seria por esta razon, cuidarlo y sanarlo de todo su dolor, amarlo y consolarlo para que tenga color, sanarte y cicatrizarte las heridas del pasado, con un amor intenso que nunca te habian dado, y aqui estamos despues dde 9 meses, casi llegando a un año, y mi corazon sigue en llamas, y mi alma deseando estar a tu lado, pues que historia mas bonita, parece un cuento inventado, pero es un cuento real de esos que no muchos han experimentado, pues el amor que tu me brindas, es mas de lo que pudiera haber deseado, no hay mejor regalo, que tu afecto y amor a mi alma, que tu cariño a mi corazon, pues tu encontraste mi corazon casi destrozado, en unos minutos lo arreglaste por todos lados, es como si tuviera 10 añitos, cuando estoy a tu lado, pues no hay mejor lugar, que el que tengo cuando estoy a tu lado.</p>
+      </div>
+    </section>
+
+    <section id="detalles">
+      <div class="container fade">
+        <h2>Perfeccion lleva tu nombre y apellidos tu belleza y tu sentido</h2>
+        <p>Para ti, que llenas mis días de luz y confidencias; cada instante a tu lado convierte lo cotidiano en eternidad. Esta página es un susurro que guarda nuestras pequeñas inmensidades, para ti, que cambias un dolor por un te amo, que cambias una tristeza por un abrazo, que me rescataste cuando estaba roto, y color a mi alma has dado. Esto no es solamente una dedicatoria, es el susurro que mi alma queria contarte, pues mi alma se queda en calma cuando es a ti a quien voy a mirarte, pues mi corazon late y late, cuando un beso me das, pues mis brazos deciden abrazarte para explicarte lo mucho que me das, es increible, pues la Luna gira para la Tierra, y yo solamente giro para ver cada milimetro de luz que tu compartes en mis dias, pues no hay mejor melodia, que la que tu voz me brinda con cada sintonia, cada dulzura de tu alma muy pura, es lo que me da la ternura y me hace verte como la mayor preciosura, eres un tesoro de los que pocos encuentran, y yo lo encontre sin ser marinero, me volvi pirata por ti, para tener tu amor eterno, verdadero y por siempre, pues contigo quiero pasar mis Diciembres, aunque ahora no sea fisicamente, nuestras almas siempre estaran presentes, casi que se termina el año, y este año lo paso contigo, pues se quedara como un recuerdo en una piedra, mas las que pondremos al lado, para hacer una montañita, de recuerdos que hemos vivido, pues no hay mejor recuerdo que el que tu en mi vida has convertido, lo que me calma no es el mar ni la estrellas, eres tu mi querida doncella, pues tienes unos labios que hipnotizan y una mirada que destella, y me encanta sentirme asi, como un loco enamorado, pues no hay amor que quiera sentir, si no es el tuyo a mi lado, pues el tuyo elijo por siempre, porque es el que eternamente tendre en mi corazon, y no me arrepiento de nada, pues eres de mi vida la razon para seguir existiendo y representarte los latidos de mi corazon.</p>
+      </div>
+    </section>
+
+    <section id="final">
+      <div class="container fade">
+        <h2>Mas una eternidad junto a ti</h2>
+        <p>A la luz de un crepúsculo compartido, cerraron ese capítulo con la certeza de que sus días seguirían entrelazados como páginas de un libro amado: simples, intensos y siempre dispuestos a volver al mismo abrazo. Y así, comenzaron su nuevo año, dispuestos a superar todos los peldaños, reforzando sus almas en un amor eterno inmune a daños, se prometieron amor infinito, para ver cuando explota el Sol, pues no hay mayor amor, que el de ellos dos, tan brillante que es su dama, tan intenso que es su amor, tan enamorado que esta su hombre, de esa modelo con belleza eterna, tan dispuestos a reparar sus corazones de cualquier mal que llegue a sus vidas. Y esos dos somos nosotros, que cerramos este año por lo alto, y nos queda el siguiente juntos mas una eternidad a tu lado, eres lo mejor que me ha pasado, en esta vida y en mis antepasados, seguro prometi buscarte cariño, y despues de galaxias te he encontrado, y en la proxima vida, te encontraria mas rapido, para pasar mas tiempo contigo, y que mi tiempo se quede parado, parado como cuando te miro, que no se si son horas las que pasaron, pues eres mi salvacion en el mar, porque en el mar perdido me has encontrado, y me salvaste y rescataste, me diste tu amor y tus besos, y desde entonces yo cuidare tu alma de por siempre para que mi corazon siempre se encuentre a tu lado. Felices 9 Meses cariño mio, como 9 fotos he puesto, pues no hay nada mejor que esto, porque dedicarte esto es mi mayor deseo, te amo mas de lo que deseo, y te deseo mas de lo que te amo, por ti te daria el mundo entero, aunque te lo tenga que representar en un ramo, de seguro te dare el universo, pero cuando tenga la fuerza de tenerlo con mi mano, por ti me volvere inmortal, para viajar al espacio, traerte una estrella y una galaxia, y poder explicarte, que ni una estrella ni una galaxia, brilla mas que tu corazon encantado.</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="color-picker" id="colorPicker">
+    <button id="bgToggle" aria-expanded="false">🎨 Fondo</button>
+    <div class="bg-panel" id="bgPanel" aria-hidden="true">
+      <label>Color 1: <input type="color" id="color1" value="#6a00f4"></label>
+      <label>Color 2: <input type="color" id="color2" value="#1e90ff"></label>
+      <label style="justify-content:flex-start;gap:10px"><input type="checkbox" id="useGradient" checked> Usar gradiente</label>
+      <div class="actions">
+        <button id="applyBg">Aplicar</button>
+        <button id="resetBg">Restablecer</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Mostrar elementos con clase .fade tras carga y manejar selector de fondo
+    document.addEventListener('DOMContentLoaded',function(){
+      document.querySelectorAll('.fade').forEach(function(el,i){setTimeout(function(){el.classList.add('show')},120*i)});
+
+      // Helpers
+      function setBG(value){
+        document.body.style.background = value;
+      }
+      function hexToRgb(hex){
+        hex = hex.replace('#','');
+        if(hex.length===3) hex = hex.split('').map(h=>h+h).join('');
+        const int = parseInt(hex,16);
+        return {r:(int>>16)&255,g:(int>>8)&255,b:int&255};
+      }
+      function brightnessFromHex(hex){
+        const c = hexToRgb(hex);
+        return (0.2126*c.r + 0.7152*c.g + 0.0722*c.b);
+      }
+      function applyTextColor(c1,c2,useGrad){
+        let b = brightnessFromHex(c1);
+        if(useGrad){ b = (b + brightnessFromHex(c2))/2; }
+        if(b>180){
+          document.documentElement.style.setProperty('--text','#111');
+        } else {
+          document.documentElement.style.setProperty('--text','#ffffff');
+        }
+      }
+
+      // Elements
+      const bgToggle = document.getElementById('bgToggle');
+      const bgPanel = document.getElementById('bgPanel');
+      const color1 = document.getElementById('color1');
+      const color2 = document.getElementById('color2');
+      const useGradient = document.getElementById('useGradient');
+      const applyBtn = document.getElementById('applyBg');
+      const resetBtn = document.getElementById('resetBg');
+
+      // Restore from localStorage
+      const saved = localStorage.getItem('page.bg');
+      if(saved){
+        try{
+          const s = JSON.parse(saved);
+          color1.value = s.c1 || color1.value;
+          color2.value = s.c2 || color2.value;
+          useGradient.checked = (s.grad===undefined)?true:!!s.grad;
+          if(useGradient.checked){
+            setBG('linear-gradient(135deg,'+color1.value+','+color2.value+')');
+            applyTextColor(color1.value,color2.value,true);
+          } else {
+            setBG(color1.value);
+            applyTextColor(color1.value,color2.value,false);
+          }
+        }catch(e){/* noop */}
+      }
+
+      // Toggle panel
+      bgToggle.addEventListener('click',function(){
+        const shown = bgPanel.classList.toggle('show');
+        bgToggle.setAttribute('aria-expanded', String(shown));
+        bgPanel.setAttribute('aria-hidden', String(!shown));
+      });
+
+      applyBtn.addEventListener('click',function(){
+        const c1 = color1.value;
+        const c2 = color2.value;
+        const grad = useGradient.checked;
+        if(grad){
+          setBG('linear-gradient(135deg,'+c1+','+c2+')');
+        } else {
+          setBG(c1);
+        }
+        applyTextColor(c1,c2,grad);
+        localStorage.setItem('page.bg', JSON.stringify({c1:c1,c2:c2,grad:grad}));
+      });
+
+      resetBtn.addEventListener('click',function(){
+        color1.value = '#6a00f4';
+        color2.value = '#1e90ff';
+        useGradient.checked = true;
+        setBG('linear-gradient(135deg,#6a00f4,#1e90ff)');
+        applyTextColor('#6a00f4','#1e90ff',true);
+        localStorage.removeItem('page.bg');
+      });
+
+      // Click outside to close
+      document.addEventListener('click',function(e){
+        if(!bgPickerContains(e.target)){
+          bgPanel.classList.remove('show');
+          bgPanel.setAttribute('aria-hidden','true');
+          bgToggle.setAttribute('aria-expanded','false');
+        }
+      });
+      function bgPickerContains(target){
+        return target===bgPanel || bgPanel.contains(target) || target===bgToggle;
+      }
+
+    });
+  </script>
+</body>
+</html>
+</style>
